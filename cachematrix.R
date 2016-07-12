@@ -3,6 +3,7 @@
 ## This is the function which makes and stores the cache matrix.
 ## Input of this function is a matrix which then returns a list of functions, 
 ## that can be applied to this matrix or the others stored in your workspace.
+## 'set' takes the matix, 'get' return it, 'seti' sets inverse of matrix and 'geti' returns it's inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
 	inv <- NULL
@@ -22,7 +23,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## it again and returns it.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
 	inv <- x$geti()
 	if(!is.null(inv)){
 		message('getting cached data')
